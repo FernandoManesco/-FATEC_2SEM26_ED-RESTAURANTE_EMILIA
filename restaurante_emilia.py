@@ -7,7 +7,7 @@ import mysql.connector               # driver do MySQL
 
 
 def verificar_login():
-    usuario = campo_usuario.get()    # get() le o que foi digitado no Entry
+    usuario = campo_usuario.get()    # get() le o que foi digitado no Entry , um editbox
     senha = campo_senha.get()
 
     if senha == "":
@@ -60,11 +60,14 @@ janela.title("Restaurante Emília")
 janela.geometry("400x400")               # largura x altura
 janela.configure(bg="white")
 
-# logotipo simples desenhado num Canvas: um "prato" com a letra E
-logo = tk.Canvas(janela, width=120, height=120, bg="white", highlightthickness=0)
-logo.pack(pady=20)
-logo.create_oval(20, 20, 100, 100, outline="#B22222", width=4)
-logo.create_text(60, 60, text="E", font=("Arial", 40, "bold"), fill="#B22222")
+# carrega a imagem do logo a partir do arquivo PNG
+# o r antes das aspas faz o Python NAO interpretar a \ como codigo especial
+logo_img = tk.PhotoImage(file=r"c:\restarante_emilia\logotipo\logotipo_milia.png")
+
+# coloca a imagem num Label e mostra na janela
+logo_label = tk.Label(janela, image=logo_img, bg="white")
+logo_label.image = logo_img          # <-- guarda a referencia (leia a armadilha 1)
+logo_label.pack(pady=20)
 
 tk.Label(janela, text="Restaurante Emília",
          font=("Arial", 18, "bold"), bg="white", fg="#B22222").pack()
