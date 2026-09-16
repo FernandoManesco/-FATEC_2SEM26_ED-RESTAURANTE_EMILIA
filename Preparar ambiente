@@ -1,0 +1,23 @@
+Usei o xamp da professora Angela para criar um banco de dados para o sistema
+
+Banco EMILIA
+
+TABELA 1
+
+USUARIOS
+CODIGO (AUTO INCREMENTO)
+NOME VARCHAR(50)
+SENHA VARCHAR(4)
+
+Preparando o ambiente de desenvolvimento python
+
+vou usar a biblioteca Tkinter que já vem junto com o Python, 
+para ter uma interface de tela com o windows instalar nada.
+
+
+para acessar o banco de dados, vou usar a biblioteca
+mysql-connector-python, o nome dela já descreve o que ela faz
+
+ela não vem com o python, então preciso isntalar no powershell
+
+pip install mysql-connector-python
