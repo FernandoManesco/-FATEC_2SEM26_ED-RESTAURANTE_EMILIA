@@ -78,6 +78,15 @@ Desenvolvimento: entregas incrementais ao longo da semana.
 Prazo final de código: início da aula de 17/09/2026.
 Apresentação: a partir das 07h50.
 
+## Como recriar o banco de dados
+
+1. Instale o XAMPP e inicie o Apache e o MySQL.
+2. Abra http://localhost/phpmyadmin
+3. Crie um banco chamado `emilia`.
+4. Selecione o banco, vá em "Importar", escolha o arquivo `banco_emilia.sql` e execute.
+5. Usuário de acesso ao sistema: **FERNANDO** / senha **1968**.
+6. Conexão configurada em `bancos.py` (padrão XAMPP: root, sem senha).
+
 As entregas incrementais (vários commits ao longo da semana) fazem parte da avaliação — evitar um único commit final.
 
 👤 Autor
