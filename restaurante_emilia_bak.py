@@ -6,9 +6,7 @@ from tkinter import messagebox       # caixinhas de aviso ou erro
 import mysql.connector               # driver do MySQL
 from bancos import Banco            # nosso arquivo de conexao com o banco
 from componentes import Logo, BotaoMenu    # importa as duas classes
-from cadastro import TelaProdutos
-from comanda import TelaComanda
-from caixa import TelaCaixa
+from telas import produtos, comanda, caixa
 
 
 def verificar_login():
@@ -47,13 +45,13 @@ def verificar_login():
         messagebox.showerror("Erro de conexão", f"Não consegui conectar:\n{erro}")
 
 def abrir_produtos():
-    TelaProdutos(janela)
+    produtos(janela)
 
 def abrir_comanda():
-    TelaComanda(janela)
+    comanda(janela)
 
 def abrir_caixa():
-    TelaCaixa(janela)
+    caixa(janela)
 def abrir_tela_principal():
     # limpa a tela de login (remove todos os widgets da janela)
     for widget in janela.winfo_children():
