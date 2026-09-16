@@ -9,6 +9,7 @@ from componentes import Logo, BotaoMenu    # importa as duas classes
 from cadastro import TelaProdutos
 from comanda import TelaComanda
 from caixa import TelaCaixa
+from faturamento import TelaFaturamento    # no topo
 
 
 def verificar_login():
@@ -54,6 +55,11 @@ def abrir_comanda():
 
 def abrir_caixa():
     TelaCaixa(janela)
+
+    
+def abrir_faturamento():
+    TelaFaturamento(janela)
+
 def abrir_tela_principal():
     # limpa a tela de login (remove todos os widgets da janela)
     for widget in janela.winfo_children():
@@ -79,6 +85,7 @@ def abrir_tela_principal():
     BotaoMenu(janela, "📦  Cadastro de Produtos", "#2E86C1", abrir_produtos).pack(pady=10)
     BotaoMenu(janela, "🍽️  Comanda / Vendas",     "#28B463", abrir_comanda).pack(pady=10)
     BotaoMenu(janela, "💰  Caixa",                 "#E67E22", abrir_caixa).pack(pady=10)
+    BotaoMenu(janela, "📊  Faturamento",           "#8E44AD", abrir_faturamento).pack(pady=10)
 
 
 # ---- Montagem da janela ----
